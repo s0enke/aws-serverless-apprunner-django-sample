@@ -3,11 +3,10 @@ runtime: python3
 build:
   commands:
     build:
-      - cd src
       - pip install pipenv
       - pipenv install
 run:
   runtime-version: 3.7.7
-  command: cd src && pipenv run gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 --max-requests 600 --log-file - whatsmytemp.wsgi:application"
+  command: pipenv run gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 --max-requests 600 --log-file - whatsmytemp.wsgi:application"
   network:
     port: 8000
