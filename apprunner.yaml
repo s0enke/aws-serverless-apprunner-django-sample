@@ -3,6 +3,6 @@ runtime: python3
 build:
   commands:
     build:
-      - pip install -r requirements-app.txt
+      - pip install -r requirements.txt
 run:
-  command: python server.py
+  command: "gunicorn --bind 0.0.0.0:8080 --workers 3 --timeout 120 --max-requests 600 --log-file - whatsmytemp.wsgi:application"

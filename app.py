@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from django.django_stack import DjangoStack
+from cdk.application import InfrastructureStack
 
 
 app = cdk.App()
-DjangoStack(app, "DjangoStack",
+InfrastructureStack(app, "DjangoStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.

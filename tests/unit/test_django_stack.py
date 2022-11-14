@@ -1,7 +1,7 @@
 import aws_cdk as core
 import aws_cdk.assertions as assertions
 
-from django.django_stack import DjangoStack
+from cdk.django_stack import DjangoStack
 
 # example tests. To run these tests, uncomment this file along with the example
 # resource in django/django_stack.py
