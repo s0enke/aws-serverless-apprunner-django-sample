@@ -18,7 +18,7 @@ class InfrastructureStack(Stack):
         service = apprunner.Service(self, "whats_my_weather",
                                     source=apprunner.Source.from_git_hub(
                                         repository_url="https://github.com/s0enke/aws-serverless-apprunner-django-sample",
-                                        branch="master",
+                                        branch="main",
                                         configuration_source=apprunner.ConfigurationSourceType.REPOSITORY,
                                         connection=apprunner.GitHubConnection.from_connection_arn(
                                             apprunner_source_connection_arn_parameter.value_as_string
