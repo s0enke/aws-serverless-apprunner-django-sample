@@ -19,3 +19,5 @@ class DjangoStack(Stack):
                                             "arn:aws:apprunner:eu-west-1:255296336815:connection/apprunner/59f079c743b94d5c98f5a619052d4ffb")
                                     )
                                     )
+        cfn_service = service.node.default_child
+        cfn_service.add_property_override('SourceConfiguration.AutoDeploymentsEnabled', True)
